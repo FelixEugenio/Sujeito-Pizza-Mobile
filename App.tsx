@@ -1,13 +1,17 @@
-import SignIn from './src/pages/SignIn';
-import { StatusBar, View } from 'react-native';
+
+import { StatusBar} from 'react-native';
+import { NavigationContainer} from  '@react-navigation/native'
+import Routes from './src/routes';
 
 export default function App() {
   return (
-    <View>
-      
-      <StatusBar barStyle={'light-content'} translucent={false} />
-      <SignIn />
-    </View>
+    <>
+    <NavigationContainer>
+    <StatusBar backgroundColor="#1d1d2e" barStyle={'light-content'} translucent={false} />
+    <Routes />
+    </NavigationContainer>
+    
+    </>
   );
 }
 
